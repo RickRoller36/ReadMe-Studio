@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadMe Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="logo"><svg viewBox="0 0 48 48"><rect x="2" y="2" width="44" height="44" rx="10" fill="#fff"/><path d="M15 11h9l5 5v16H15z" fill="none" stroke="#000" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 11v5h5" fill="none" stroke="#000" stroke-width="2.6" stroke-linejoin="round"/><path d="M19 21h10M19 25h10M19 29h6" stroke="#000" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+  <div>
+    <h1>ReadMe Studio</h1>
+    <p class="sub">Glisse des éléments, règle, exporte ton README GitHub</p>
+  </div>
+  <div class="toolbar">
+    <button class="ghost" id="btnNew">Nouveau</button>
+    <button class="ghost" id="btnOpen">Ouvrir…</button>
+    <button class="ghost" id="btnSaveProject">Sauver projet</button>
+    <span class="sep"></span>
+    <button class="ghost" id="btnCheckUrls">Vérifier les images</button>
+    <button class="ghost" id="btnCopy">Copier le Markdown</button>
+    <button id="btnDownload">Télécharger README.md</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside id="palette">
+    <h2>Éléments</h2>
+    <p class="hint">Clique pour ajouter, ou glisse vers le canevas.</p>
+    <div id="paletteList"></div>
+  </aside>
+
+  <main id="canvasWrap">
+    <h2>Canevas <span id="blockCount" class="count"></span></h2>
+    <div id="canvas"></div>
+  </main>
+
+  <aside id="props">
+    <h2>Réglages</h2>
+    <div id="propsBody"><p class="hint">Clique un bloc du canevas pour le régler ici.</p></div>
+  </aside>
+</div>
+
+<section class="card preview-card hidden" id="urlCard">
+  <div class="preview-head">
+    <h2>Vérification des images</h2>
+    <span class="count" id="urlCount"></span>
+  </div>
+  <div id="urlReport" style="padding:12px 16px"></div>
+</section>
+
+<section class="card preview-card">
+  <div class="preview-head">
+    <h2>Aperçu</h2>
+    <div class="tabs">
+      <button class="ghost active" id="tabPreview">Rendu</button>
+      <button class="ghost" id="tabSource">Markdown</button>
+    </div>
+  </div>
+  <div id="preview" class="md-body"></div>
+  <pre id="source" class="hidden"></pre>
+</section>
+
+<div id="toast"></div>
+
+<script src="blocks.js"></script>
+<script src="md.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

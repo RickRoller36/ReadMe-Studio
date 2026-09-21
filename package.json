@@ -1,0 +1,14 @@
+{
+  "name": "readme-studio",
+  "version": "1.0.0",
+  "description": "ReadMe Studio — crée le README de ta page GitHub par glisser-déposer",
+  "main": "main.js",
+  "author": "ReadMe Studio",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  }
+}
